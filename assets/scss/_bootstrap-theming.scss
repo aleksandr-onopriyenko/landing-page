@@ -1,0 +1,69 @@
+//---------------------------- HEADER BLOCK ----------------------------
+
+.navbar {
+  &-brand {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+  }
+
+  &-nav {
+    font-size: 1rem;
+  }
+
+  &-toggler {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-dark &-toggler {
+    border-color: rgba($color-light, 0.85);
+  }
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.carousel {
+  &-inner {
+    height: 100vh;
+    width: 100%;
+  }
+  &-item {
+    height: 100%;
+    position: relative;
+
+    &:nth-child(1) {
+      .slider-overlay {
+        opacity: 0.69;
+      }
+    }
+    &:nth-child(2) {
+      .slider-overlay {
+        opacity: 0.2;
+      }
+    }
+    &:nth-child(3) {
+      .slider-overlay {
+        opacity: 0.2;
+      }
+    }
+
+    &:nth-child(4) {
+      .slider-overlay {
+        opacity: 0.3;
+      }
+      img {
+        filter: grayscale(0.5);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+//---------------------------- HEADER BLOCK END ----------------------------
