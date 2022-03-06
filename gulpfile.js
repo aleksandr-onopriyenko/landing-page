@@ -1,24 +1,82 @@
-'use strict';
+const {task, series, parallel, src, dest, watch} = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const browserSync = require('browser-sync');
+const postcss = require('gulp-postcss');
+const csscomb = require('gulp-csscomb');
+const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
+const sortCSSmq = require('sort-css-media-queries');
 
-require('../../gulp/gulp-init.js')({ HTML: '.' });
+const PATH = {
+  scssFolder: './assets/scss/',
+  scssFiles: './assets/scss/**/*.scss',
+  scssFile: './assets/scss/style.scss',
+  cssFolder: './assets/css/',
+  cssFiles: './assets/css/*.css',
+  cssFile: './assets/css/style.css',
+  htmlFiles: './*.html',
+  jsFiles: './assets/js/**/*.js'
+};
 
-const comb = require('../../gulp/tasks/comb');
-const cs = require('../../gulp/tasks/create-structure');
-const { scssDC, scssDev } = require('../../gulp/tasks/scss.js');
-const mincss = require('../../gulp/tasks/mincss');
-const uglifyes = require('../../gulp/tasks/uglify').uglifyes;
-const { sync, syncInit } = require('../../gulp/tasks/sync');
+const PLUGINS = [
+  autoprefixer({
+    overrideBrowserslist: [
+      'last 5 versions',
+      '> 0.1%'
+    ],
+    cascade: true
+  }),
+  mqpacker({sort: sortCSSmq})
+];
+
+function scss() {
+  return src(PATH.scssFile)
+      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+      .pipe(postcss(PLUGINS))
+      .pipe(dest(PATH.cssFolder))
+      .pipe(browserSync.stream());
+}
+
+function scssDev() {
+  return src(PATH.scssFile, {sourcemaps: true})
+      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+      .pipe(dest(PATH.cssFolder, {sourcemaps: true}))
+      .pipe(browserSync.stream());
+}
+
+function comb() {
+  return src(PATH.scssFiles)
+      .pipe(csscomb())
+      .pipe(dest(PATH.scssFolder));
+}
+
+function syncInit() {
+  browserSync({
+    server: {baseDir: './'},
+    notify: false
+  });
+}
+
+async function sync() {
+  browserSync.reload();
+}
 
 function watchFiles() {
   syncInit();
-  watch($.PATH.scss.files, series(scssDC, mincss));
-  watch([$.PATH.js.files, '!' + $.PATH.js.filesMin], series(sync));
-  watch($.PATH.html.files, sync);
+  watch(PATH.scssFiles, series(scss));
+  watch(PATH.htmlFiles, sync);
+  watch(PATH.jsFiles, sync);
+  watch(PATH.cssFiles, sync);
 }
 
-task('cs', cs);
-task('combScss', comb);
-task('uglifyEs6', series(uglifyes, sync));
-task('sass', series(scssDC));
-task('sassDev', series(scssDev));
+function watchDevFiles() {
+  syncInit();
+  watch(PATH.scssFiles, series(scssDev));
+  watch(PATH.htmlFiles, sync);
+  watch(PATH.jsFiles, sync);
+}
+
+task('comb', series(comb));
+task('scss', series(scss));
+task('dev', watchDevFiles);
 task('watch', watchFiles);
