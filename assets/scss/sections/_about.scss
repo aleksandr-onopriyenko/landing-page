@@ -1,0 +1,36 @@
+.about {
+  @extend %section;
+  &-title {
+    @extend %section-title;
+  }
+}
+
+.list-group {
+  margin-top: -12px;
+  margin-bottom: 18px;
+  &-item {
+    margin-bottom: 6px;
+
+    border: none;
+    &__title {
+      margin-bottom: 8px;
+
+      font-size: 1.125rem;
+    }
+  }
+
+  &-progress {
+    @include lg-min {
+      height: 20px;
+    }
+    &__bar {
+      background-color: $color-accent;
+    }
+  }
+}
+
+.test {
+  background-color: #cccccc;
+
+  @extend %section;
+}

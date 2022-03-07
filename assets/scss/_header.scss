@@ -1,29 +1,29 @@
 .header {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  z-index: 1000;
 
   width: 100%;
 
   font-size: 1.25rem;
+
   @include sm {
     &-menu {
-      padding-left: 1px;
       padding-right: 1px;
+      padding-left: 1px;
     }
   }
-
   @include lg {
     background: rgba($color-dark, 0.85);
 
     &-menu {
-      text-align: center;
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
+
+      text-align: center;
     }
   }
-
   @include lg-min {
     &-menu {
       padding: 15px 0 !important;
@@ -33,6 +33,7 @@
       }
       &__link {
         display: block;
+
         padding: 0.9375rem 0.46875rem !important;
       }
     }

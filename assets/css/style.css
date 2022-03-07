@@ -3,6 +3,24 @@
 /* md */
 /* sm */
 /* xs */
+.test, .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding: 90px 0 45px;
+}
+
+.about-title {
+  margin-bottom: 22.5px;
+}
+
 .navbar-brand {
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -22,12 +40,12 @@
 }
 
 .carousel-inner {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
 }
 .carousel-item {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 .carousel-item:nth-child(1) .slider-overlay {
   opacity: 0.69;
@@ -54,9 +72,9 @@
 
 .header {
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  z-index: 1000;
   width: 100%;
   font-size: 1.25rem;
 }
@@ -65,12 +83,42 @@
 }
 
 html {
-  font-size: 16px;
   overflow-y: scroll;
+  font-size: 16px;
 }
 
 body {
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
+}
+
+section {
+  overflow: hidden;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif;
+}
+
+h4 {
+  font-family: "Roboto Slab", serif;
+}
+
+h5 {
+  font-family: "Roboto Slab", serif;
+}
+
+h6 {
+  font-family: "Roboto Slab", serif;
 }
 
 .slider {
@@ -78,19 +126,46 @@ body {
 }
 .slider-overlay {
   position: absolute;
-  inset: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  z-index: 1;
   background: #010101;
+  inset: 0;
 }
 .slider-item__title {
   display: block;
+  margin-bottom: 4px;
   font-family: "Roboto Slab", serif;
   font-size: 1.75rem;
-  margin-bottom: 4px;
 }
+
+.list-group {
+  margin-top: -12px;
+  margin-bottom: 18px;
+}
+.list-group-item {
+  margin-bottom: 6px;
+  border: none;
+}
+.list-group-item__title {
+  margin-bottom: 8px;
+  font-size: 1.125rem;
+}
+.list-group-progress__bar {
+  background-color: #ee3b24;
+}
+
+.test {
+  background-color: #cccccc;
+}
+
 @media (min-width: 992px) {
+  .test, .about {
+    padding: 105px 0 90px;
+  }
+  .about-title {
+    margin-bottom: 45px;
+  }
   .header-menu {
     padding: 15px 0 !important;
   }
@@ -101,20 +176,34 @@ body {
     display: block;
     padding: 0.9375rem 0.46875rem !important;
   }
+  .list-group-progress {
+    height: 20px;
+  }
 }
+
 @media (max-width: 991.8px) {
   .header {
     background: rgba(1, 1, 1, 0.85);
   }
   .header-menu {
-    text-align: center;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
+    text-align: center;
   }
 }
+
+@media (max-width: 991.8px) and (min-width: 768px) {
+  .test, .about {
+    padding: 105px 0 75px;
+  }
+  .about-title {
+    margin-bottom: 37.5px;
+  }
+}
+
 @media (max-width: 575.8px) {
   .header-menu {
-    padding-left: 1px;
     padding-right: 1px;
+    padding-left: 1px;
   }
 }

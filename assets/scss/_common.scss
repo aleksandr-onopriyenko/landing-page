@@ -1,9 +1,23 @@
 html {
-  font-size: $font-size;
-
   overflow-y: scroll;
+
+  font-size: $font-size;
 }
 
 body {
+  overflow: hidden;
+
   font-family: $font-main;
+}
+
+section {
+  overflow: hidden;
+
+  width: 100%;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $font-header;
+  }
 }

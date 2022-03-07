@@ -3,6 +3,7 @@
 .navbar {
   &-brand {
     text-transform: uppercase;
+
     font-size: 1.25rem;
   }
 
@@ -26,12 +27,13 @@
 
 .carousel {
   &-inner {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
   }
   &-item {
-    height: 100%;
     position: relative;
+
+    height: 100%;
 
     &:nth-child(1) {
       .slider-overlay {
@@ -61,6 +63,7 @@
     img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
   }
