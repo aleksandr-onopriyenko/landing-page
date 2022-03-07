@@ -14,7 +14,8 @@
   }
 }
 
-%section-title {
+%section-title,
+%section-subtitle {
   margin-bottom: 22.5px;
 
   @include lg-md {

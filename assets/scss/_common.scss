@@ -7,6 +7,8 @@ html {
 body {
   overflow: hidden;
 
+  color: $color-gray;
+
   font-family: $font-main;
 }
 
@@ -18,6 +20,16 @@ section {
 
 @for $i from 1 through 6 {
   h#{$i} {
+    color: $color-dark;
+
     font-family: $font-header;
+  }
+}
+
+.about,
+.features {
+  @extend %section;
+  &-title {
+    @extend %section-title;
   }
 }

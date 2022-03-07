@@ -1,10 +1,3 @@
-.about {
-  @extend %section;
-  &-title {
-    @extend %section-title;
-  }
-}
-
 .list-group {
   margin-top: -12px;
   margin-bottom: 18px;
@@ -27,10 +20,4 @@
       background-color: $color-accent;
     }
   }
-}
-
-.test {
-  background-color: #cccccc;
-
-  @extend %section;
 }
