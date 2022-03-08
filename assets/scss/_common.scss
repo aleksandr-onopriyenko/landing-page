@@ -30,7 +30,8 @@ section {
 .features,
 .gallery,
 .blog,
-.advantages-content {
+.advantages-content,
+.contacts {
   @extend %section;
   &-title {
     @extend %section-title;

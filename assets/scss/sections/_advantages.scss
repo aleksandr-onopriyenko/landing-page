@@ -10,14 +10,6 @@
       padding-right: 30px;
       padding-left: 30px;
     }
-    &-subtitle {
-      margin-bottom: 30px;
-
-      @extend %section-subtitle;
-      @include lg-md {
-        margin-bottom: 45px;
-      }
-    }
   }
   &-image {
     @include bg-image("../img/backgrounds/background-1.jpg", #cccccc, relative);

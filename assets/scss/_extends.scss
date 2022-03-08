@@ -17,8 +17,7 @@
   }
 }
 
-%section-title,
-%section-subtitle {
+%section-title {
   margin-bottom: 22.5px;
 
   @include lg-md {
@@ -26,5 +25,14 @@
   }
   @include lg-min {
     margin-bottom: 45px;
+  }
+}
+
+%section-subtitle {
+  @include md-min {
+    margin-bottom: 45px;
+  }
+  @include md {
+    margin-bottom: 30px;
   }
 }

@@ -1,0 +1,29 @@
+.contacts {
+  &-textarea {
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+
+  &-mail {
+    @include md-min {
+      padding-right: 5px;
+    }
+  }
+
+  &-tel {
+    @include md-min {
+      padding-left: 5px;
+    }
+  }
+
+  &-actions {
+    @include md-min {
+      padding: 0 10px;
+    }
+    &-btn {
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+}

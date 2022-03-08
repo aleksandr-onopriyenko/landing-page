@@ -1,16 +1,5 @@
 .blog {
   background-color: rgba($color-gray, 0.1);
-  &-title {
-    @extend %section-title;
-  }
-  &-subtitle {
-    margin-bottom: 30px;
-
-    @extend %section-subtitle;
-    @include lg-md {
-      margin-bottom: 45px;
-    }
-  }
 
   &-top {
     padding: 0 30px;

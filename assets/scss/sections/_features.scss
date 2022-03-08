@@ -6,22 +6,11 @@
   @include lg-md {
     padding-bottom: 83px;
   }
-  @include lg-min {
-    &-container {
-      margin-top: -8px;
-    }
-  }
   &-subtitle {
-    @extend %section-subtitle;
+    margin-bottom: 37.5px;
   }
 
   &-item {
-    // margin-bottom: 15px;
-    padding-top: 15px;
-
-    @include lg-min {
-      padding-top: 7px;
-    }
     &__icon {
       position: relative;
 
