@@ -28,7 +28,8 @@ section {
 
 .about,
 .features,
-.gallery {
+.gallery,
+.blog {
   @extend %section;
   &-title {
     @extend %section-title;

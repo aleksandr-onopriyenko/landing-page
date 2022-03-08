@@ -1,0 +1,79 @@
+.blog {
+  background-color: rgba($color-gray, 0.1);
+  &-title {
+    @extend %section-title;
+  }
+  &-subtitle {
+    margin-bottom: 30px;
+
+    @extend %section-subtitle;
+    @include lg-md {
+      margin-bottom: 45px;
+    }
+  }
+
+  &-top {
+    padding: 0 30px;
+  }
+  &-item {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-light;
+    }
+    &:hover &-info__title {
+      color: $color-light;
+    }
+    &:hover &-poster__image {
+      transform: scale(1.25);
+      filter: saturate(1.5);
+    }
+    &:hover &-info {
+      background-color: $color-accent;
+      color: $color-light;
+    }
+
+    &-poster {
+      overflow: hidden;
+      padding: 0;
+      &__image {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+
+        filter: saturate(0.75);
+        transition: transform 0.5s ease;
+
+        @include md {
+          margin-top: -10%;
+          margin-bottom: -35%;
+        }
+      }
+    }
+
+    &-info {
+      background-color: $color-light;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 0.875rem;
+      color: $color-gray;
+      &__title {
+        font-size: 1.125rem;
+      }
+      &__data {
+        display: block;
+        margin: 15px 0;
+      }
+      &__text {
+        margin-top: 15px;
+        margin-bottom: 0;
+
+        @include md {
+          margin: 15px 0 30px;
+        }
+      }
+    }
+  }
+}

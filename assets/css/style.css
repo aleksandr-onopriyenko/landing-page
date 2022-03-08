@@ -5,7 +5,8 @@
 /* xs */
 .about,
 .features,
-.gallery {
+.gallery,
+.blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,6 +23,8 @@
 .about-title,
 .features-title,
 .gallery-title,
+.blog-title,
+.blog-subtitle,
 .gallery-subtitle,
 .features-subtitle {
   margin-bottom: 22.5px;
@@ -318,6 +321,73 @@ h6 {
   text-decoration: none;
   color: #fefefe;
 }
+
+.blog {
+  background-color: rgba(84, 84, 84, 0.1);
+}
+.blog-subtitle {
+  margin-bottom: 30px;
+}
+.blog-top {
+  padding: 0 30px;
+}
+.blog-item {
+  text-decoration: none;
+  color: inherit;
+}
+.blog-item:hover {
+  text-decoration: none;
+  color: #fefefe;
+}
+.blog-item:hover .blog-item-info__title {
+  color: #fefefe;
+}
+.blog-item:hover .blog-item-poster__image {
+  -webkit-transform: scale(1.25);
+      -ms-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+}
+.blog-item:hover .blog-item-info {
+  background-color: #ee3b24;
+  color: #fefefe;
+}
+.blog-item-poster {
+  overflow: hidden;
+  padding: 0;
+}
+.blog-item-poster__image {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: saturate(0.75);
+          filter: saturate(0.75);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.blog-item-info {
+  background-color: #fefefe;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 0.875rem;
+  color: #545454;
+}
+.blog-item-info__title {
+  font-size: 1.125rem;
+}
+.blog-item-info__data {
+  display: block;
+  margin: 15px 0;
+}
+.blog-item-info__text {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
   .features-item__icon {
     display: -webkit-box;
@@ -342,12 +412,15 @@ h6 {
 @media (min-width: 992px) {
   .about,
 .features,
-.gallery {
+.gallery,
+.blog {
     padding: 105px 0 90px;
   }
   .about-title,
 .features-title,
 .gallery-title,
+.blog-title,
+.blog-subtitle,
 .gallery-subtitle,
 .features-subtitle {
     margin-bottom: 45px;
@@ -411,12 +484,15 @@ h6 {
 @media (max-width: 991.8px) and (min-width: 768px) {
   .about,
 .features,
-.gallery {
+.gallery,
+.blog {
     padding: 105px 0 75px;
   }
   .about-title,
 .features-title,
 .gallery-title,
+.blog-title,
+.blog-subtitle,
 .gallery-subtitle,
 .features-subtitle {
     margin-bottom: 37.5px;
@@ -426,6 +502,18 @@ h6 {
   }
   .gallery-subtitle {
     margin-bottom: 45px;
+  }
+  .blog-subtitle {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 767.8px) {
+  .blog-item-poster__image {
+    margin-top: -10%;
+    margin-bottom: -35%;
+  }
+  .blog-item-info__text {
+    margin: 15px 0 30px;
   }
 }
 @media (max-width: 575.8px) {
