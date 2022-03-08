@@ -26,20 +26,72 @@
   }
   @include lg-min {
     &-menu {
-      padding: 15px 0 !important;
+      padding: 15px 0;
+
+      &.p-my-0 {
+        padding: 0;
+      }
 
       &__item {
+        overflow: hidden;
+
         padding: 0 0.46875rem !important;
       }
       &__link {
+        position: relative;
+
         display: block;
 
         padding: 0.9375rem 0.46875rem !important;
+
+        &:before {
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+
+          display: block;
+
+          width: 100%;
+          height: 3px;
+
+          content: "";
+          transition: transform 0.3s ease-in;
+
+          background-color: $color-light;
+        }
+
+        &:hover:before {
+          bottom: 0;
+
+          transform: translateY(-10px);
+        }
       }
     }
   }
 
   &-menu__link {
     color: $color-light !important;
+  }
+
+  &-navbar--scroled {
+    background-color: rgba($color-dark, 0.85);
+    // padding: 0 !important;
+  }
+}
+
+.header-navbar--scroled .nav-item.active a {
+  color: $color-accent !important;
+  text-shadow: 0 0 1px $color-accent;
+  &:before {
+    bottom: 10px;
+
+    transition: all 0s;
+
+    background-color: $color-accent;
+  }
+  &:hover:before {
+    bottom: 0;
+
+    background-color: $color-accent;
   }
 }

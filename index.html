@@ -36,25 +36,25 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item header-menu__item active">
-                  <a class="nav-link header-menu__link" href="#">Home</a>
+                  <a class="nav-link header-menu__link" href="#home">Home</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">About us</a>
+                  <a class="nav-link header-menu__link" href="#about">About us</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">Features</a>
+                  <a class="nav-link header-menu__link" href="#features">Features</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">Gallery</a>
+                  <a class="nav-link header-menu__link" href="#gallery">Gallery</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">Blog</a>
+                  <a class="nav-link header-menu__link" href="">Blog</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">Advantages</a>
+                  <a class="nav-link header-menu__link" href="">Advantages</a>
                 </li>
                 <li class="nav-item header-menu__item">
-                  <a class="nav-link header-menu__link" href="#">Contacts</a>
+                  <a class="nav-link header-menu__link" href="">Contacts</a>
                 </li>
               </ul>
             </div>
@@ -65,7 +65,7 @@
     </div>
   </header>
 
-  <section class="slider">
+  <section class="slider" id="home">
     <div class="bd-example">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -120,7 +120,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -199,8 +199,8 @@
 
   </section>
 
-  <section class="features">
-    <div class="container">
+  <section class="features" id="features">
+    <div class="container features-container">
       <div class="row">
         <div class="col-12">
           <h2 class="features-title text-center" data-aos="fade-up">Our Features</h2>
@@ -264,7 +264,91 @@
     </div>
   </section>
 
-  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <section class="gallery" id="gallery">
+    <div class="container-fluid gallery-fluid">
+      <div class="gallery-top">
+        <h2 class="gallery-title text-center" data-aos="fade-up">What we do with love</h2>
+        <p class="gallery-subtitle text-center" data-aos="fade-up" data-aos-delay="200">Vestibulum ante ipsum primis
+          in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+      </div>
+
+      <div class="row gallery-content">
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-right" data-aos-delay="300">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/barn-owl-1107397_1920-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-down" data-aos-delay="500">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/child-1111818_1920-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-down" data-aos-delay="700">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/coffee-1117933_1920-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-left" data-aos-delay="900">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/cologne-1078671_1280-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-right" data-aos-delay="500">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/girl-1128523_1920-550x500.jpg" alt="gallery image" class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-up" data-aos-delay="700">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/pexels-photo-550x500.jpg" alt="gallery image" class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 ml-auto col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-up" data-aos-delay="900">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/skyline-936589_1920-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 mr-auto col-lg-3 gallery-col">
+          <div class="gallery-item" data-aos="zoom-in-left" data-aos-delay="1100">
+            <div class="gallery-item__overlay"></div>
+            <img src="assets/img/gallery/sunrise-1107408_1920-550x500.jpg" alt="gallery image"
+              class="gallery-item__image">
+            <h3 class="gallery-item__title">Lorem ipsum dolor sit.</h3>
+            <a href="#" class="gallery-item__link"><i class="fas fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="libs/popper.js/dist/umd/popper.min.js"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="libs/jQuery-One-Page-Nav/jquery.nav.js"></script>
