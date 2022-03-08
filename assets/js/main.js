@@ -11,6 +11,7 @@
      header.classList.remove('header-navbar--scroled');
     }
   }
+    fixedNav()
     window.addEventListener('scroll', fixedNav)
 
     $(".header-navbar--scroled").hover(

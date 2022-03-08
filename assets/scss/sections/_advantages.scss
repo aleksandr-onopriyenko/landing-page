@@ -1,0 +1,65 @@
+.advantages {
+  &-content {
+    background-color: rgba($color-gray, 0.22);
+
+    @include md-min {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    @include xl-min {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    &-subtitle {
+      margin-bottom: 30px;
+
+      @extend %section-subtitle;
+      @include lg-md {
+        margin-bottom: 45px;
+      }
+    }
+  }
+  &-image {
+    @include bg-image("../img/backgrounds/background-1.jpg", #cccccc, relative);
+  }
+
+  &-item {
+    margin-bottom: 15px;
+
+    @include md-sm {
+      margin-bottom: 10px;
+    }
+    &__icon {
+      padding: 0 15px;
+      i {
+        width: 35px;
+        margin-top: 7.5px;
+
+        text-align: center;
+
+        color: $color-accent;
+
+        font-size: 2rem;
+
+        @include md-min {
+          width: 60px;
+
+          font-size: 2.75rem;
+        }
+      }
+    }
+
+    &__caption {
+      width: calc(100% - 65px);
+      padding: 0 15px;
+
+      @include lg-min {
+        width: calc(100% - 90px);
+      }
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

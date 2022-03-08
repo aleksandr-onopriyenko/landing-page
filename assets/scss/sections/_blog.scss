@@ -17,10 +17,12 @@
   }
   &-item {
     text-decoration: none;
+
     color: inherit;
 
     &:hover {
       text-decoration: none;
+
       color: $color-light;
     }
     &:hover &-info__title {
@@ -28,48 +30,55 @@
     }
     &:hover &-poster__image {
       transform: scale(1.25);
+
       filter: saturate(1.5);
     }
     &:hover &-info {
-      background-color: $color-accent;
       color: $color-light;
+      background-color: $color-accent;
     }
 
     &-poster {
       overflow: hidden;
+
       padding: 0;
       &__image {
         display: block;
-        width: 100%;
-        object-fit: cover;
 
-        filter: saturate(0.75);
+        width: 100%;
+
         transition: transform 0.5s ease;
 
+        filter: saturate(0.75);
         @include md {
           margin-top: -10%;
           margin-bottom: -35%;
         }
+        object-fit: cover;
       }
     }
 
     &-info {
-      background-color: $color-light;
       padding-top: 15px;
       padding-bottom: 15px;
-      font-size: 0.875rem;
+
       color: $color-gray;
+      background-color: $color-light;
+
+      font-size: 0.875rem;
       &__title {
         font-size: 1.125rem;
       }
       &__data {
         display: block;
+
         margin: 15px 0;
       }
       &__text {
         margin-top: 15px;
         margin-bottom: 0;
 
+        @include block-shorten(0.875rem, 1.5, 85px, 4);
         @include md {
           margin: 15px 0 30px;
         }

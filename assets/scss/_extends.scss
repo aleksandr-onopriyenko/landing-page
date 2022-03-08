@@ -4,13 +4,16 @@
   justify-content: center;
 
   min-height: 100vh;
-  padding: 90px 0 45px;
+  padding-top: 90px;
+  padding-bottom: 45px;
 
   @include lg-md {
-    padding: 105px 0 75px;
+    padding-top: 105px;
+    padding-bottom: 75px;
   }
   @include lg-min {
-    padding: 105px 0 90px;
+    padding-top: 105px;
+    padding-bottom: 90px;
   }
 }
 

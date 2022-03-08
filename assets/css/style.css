@@ -6,7 +6,8 @@
 .about,
 .features,
 .gallery,
-.blog {
+.blog,
+.advantages-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,16 +18,20 @@
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
-  padding: 90px 0 45px;
+  padding-top: 90px;
+  padding-bottom: 45px;
 }
 
 .about-title,
 .features-title,
 .gallery-title,
 .blog-title,
-.blog-subtitle,
+.advantages-content-title,
+.about-subtitle,
+.features-subtitle,
 .gallery-subtitle,
-.features-subtitle {
+.blog-subtitle,
+.advantages-content-subtitle {
   margin-bottom: 22.5px;
 }
 
@@ -350,8 +355,8 @@ h6 {
           filter: saturate(1.5);
 }
 .blog-item:hover .blog-item-info {
-  background-color: #ee3b24;
   color: #fefefe;
+  background-color: #ee3b24;
 }
 .blog-item-poster {
   overflow: hidden;
@@ -360,22 +365,22 @@ h6 {
 .blog-item-poster__image {
   display: block;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: saturate(0.75);
-          filter: saturate(0.75);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   -o-transition: transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-filter: saturate(0.75);
+          filter: saturate(0.75);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .blog-item-info {
-  background-color: #fefefe;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 0.875rem;
   color: #545454;
+  background-color: #fefefe;
+  font-size: 0.875rem;
 }
 .blog-item-info__title {
   font-size: 1.125rem;
@@ -387,6 +392,47 @@ h6 {
 .blog-item-info__text {
   margin-top: 15px;
   margin-bottom: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  height: 85px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  -webkit-line-clamp: 4;
+}
+
+.advantages-content {
+  background-color: rgba(84, 84, 84, 0.22);
+}
+.advantages-content-subtitle {
+  margin-bottom: 30px;
+}
+.advantages-image {
+  background-color: #cccccc;
+  background-image: url("../img/backgrounds/background-1.jpg");
+  background-position: 33% center;
+  background-size: cover;
+}
+.advantages-item {
+  margin-bottom: 15px;
+}
+.advantages-item__icon {
+  padding: 0 15px;
+}
+.advantages-item__icon i {
+  width: 35px;
+  margin-top: 7.5px;
+  text-align: center;
+  color: #ee3b24;
+  font-size: 2rem;
+}
+.advantages-item__caption {
+  width: -webkit-calc(100% - 65px);
+  width: calc(100% - 65px);
+  padding: 0 15px;
+}
+.advantages-item__title {
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .features-item__icon {
@@ -408,21 +454,34 @@ h6 {
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
+  .advantages-content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .advantages-item__icon i {
+    width: 60px;
+    font-size: 2.75rem;
+  }
 }
 @media (min-width: 992px) {
   .about,
 .features,
 .gallery,
-.blog {
-    padding: 105px 0 90px;
+.blog,
+.advantages-content {
+    padding-top: 105px;
+    padding-bottom: 90px;
   }
   .about-title,
 .features-title,
 .gallery-title,
 .blog-title,
-.blog-subtitle,
+.advantages-content-title,
+.about-subtitle,
+.features-subtitle,
 .gallery-subtitle,
-.features-subtitle {
+.blog-subtitle,
+.advantages-content-subtitle {
     margin-bottom: 45px;
   }
   .header-menu {
@@ -470,6 +529,16 @@ h6 {
   .features-item {
     padding-top: 7px;
   }
+  .advantages-item__caption {
+    width: -webkit-calc(100% - 90px);
+    width: calc(100% - 90px);
+  }
+}
+@media (min-width: 1200px) {
+  .advantages-content {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 @media (max-width: 991.8px) {
   .header {
@@ -485,16 +554,21 @@ h6 {
   .about,
 .features,
 .gallery,
-.blog {
-    padding: 105px 0 75px;
+.blog,
+.advantages-content {
+    padding-top: 105px;
+    padding-bottom: 75px;
   }
   .about-title,
 .features-title,
 .gallery-title,
 .blog-title,
-.blog-subtitle,
+.advantages-content-title,
+.about-subtitle,
+.features-subtitle,
 .gallery-subtitle,
-.features-subtitle {
+.blog-subtitle,
+.advantages-content-subtitle {
     margin-bottom: 37.5px;
   }
   .features {
@@ -506,6 +580,9 @@ h6 {
   .blog-subtitle {
     margin-bottom: 45px;
   }
+  .advantages-content-subtitle {
+    margin-bottom: 45px;
+  }
 }
 @media (max-width: 767.8px) {
   .blog-item-poster__image {
@@ -514,6 +591,11 @@ h6 {
   }
   .blog-item-info__text {
     margin: 15px 0 30px;
+  }
+}
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .advantages-item {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 575.8px) {

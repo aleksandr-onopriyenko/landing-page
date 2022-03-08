@@ -29,9 +29,13 @@ section {
 .about,
 .features,
 .gallery,
-.blog {
+.blog,
+.advantages-content {
   @extend %section;
   &-title {
     @extend %section-title;
+  }
+  &-subtitle {
+    @extend %section-subtitle;
   }
 }
