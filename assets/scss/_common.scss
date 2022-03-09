@@ -2,9 +2,11 @@ html {
   overflow-y: scroll;
 
   font-size: $font-size;
+  line-height: 1rem;
 }
 
 body {
+  position: relative;
   overflow: hidden;
 
   color: $color-gray;
@@ -38,5 +40,38 @@ section {
   }
   &-subtitle {
     @extend %section-subtitle;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  .btn {
+    display: block;
+    width: 45px;
+    height: 45px;
+
+    opacity: 0.25;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  i {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: -2px;
+    transition: margin-top 0.5s ease-in-out;
+  }
+
+  .btn:hover i {
+    margin-top: -16px;
   }
 }

@@ -115,9 +115,11 @@
 html {
   overflow-y: scroll;
   font-size: 16px;
+  line-height: 1rem;
 }
 
 body {
+  position: relative;
   overflow: hidden;
   color: #545454;
   font-family: "Roboto", sans-serif;
@@ -156,6 +158,37 @@ h5 {
 h6 {
   color: #010101;
   font-family: "Roboto Slab", serif;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+.back-to-top .btn {
+  display: block;
+  width: 45px;
+  height: 45px;
+  opacity: 0.25;
+}
+.back-to-top .btn:hover {
+  opacity: 1;
+}
+.back-to-top .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+.back-to-top i {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: -2px;
+  -webkit-transition: margin-top 0.5s ease-in-out;
+  -o-transition: margin-top 0.5s ease-in-out;
+  transition: margin-top 0.5s ease-in-out;
+}
+.back-to-top .btn:hover i {
+  margin-top: -16px;
 }
 
 .slider {
@@ -198,6 +231,10 @@ h6 {
 }
 .features-subtitle {
   margin-bottom: 37.5px;
+}
+.features-item {
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
 .features-item__icon {
   position: relative;
@@ -448,6 +485,42 @@ h6 {
 .contacts-actions-btn {
   color: #ee3b24;
   border-color: #ee3b24;
+}
+
+.footer {
+  background-color: #282828;
+  color: #b2b2b2;
+  font-size: 0.875rem;
+}
+.footer-contact {
+  padding: 45px 15px 30px;
+}
+.footer-title {
+  color: rgba(254, 254, 254, 0.8);
+}
+.footer-title::first-letter {
+  color: #ee3b24;
+}
+.footer-item {
+  padding-bottom: 16.5px;
+}
+.footer-top {
+  margin-bottom: 24px;
+}
+.footer-list-link {
+  color: inherit;
+  padding-left: 30px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3e%3c!-- Font Awesome Pro 5.15.4 by %40fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --%3e%3cpath fill='%23b2b2b2' d='M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 12.25px 21px;
+  background-position: 0 -1px;
+}
+.footer-copy {
+  padding: 30px 0;
+  background-color: rgba(84, 84, 84, 0.3);
+}
+.footer-copy a {
+  color: inherit;
 }
 @media (min-width: 768px) {
   .about-subtitle,

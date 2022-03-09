@@ -29,7 +29,7 @@
 
             <a class="navbar-brand" href="#">Brand name</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-title="Toggle navigation">
+              aria-controls="#navbar-collapse" aria-expanded="false" aria-title="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -517,23 +517,26 @@
 
       <div class="row">
         <div class="col-sm-12 col-lg-8 mx-auto">
-          <form action="/">
+          <form action="/" method="get">
             <div class="row">
-              <div class="col-12 input-group-lg form-group">
+              <div class="col-12 input-group-lg form-group" data-aos="fade-up" data-aos-delay="300">
                 <input type="text" name="name" class="form-control" placeholder="Your name">
               </div>
-              <div class="col-12 col-md-6 input-group-lg form-group contacts-mail">
+              <div class="col-12 col-md-6 input-group-lg form-group contacts-mail" data-aos="fade-up-right"
+                data-aos-delay="500">
                 <input type="email" name="email" class="form-control" placeholder="Email">
               </div>
-              <div class="col-12 col-md-6 input-group-lg form-group contacts-tel">
+              <div class="col-12 col-md-6 input-group-lg form-group contacts-tel" data-aos="fade-up-left"
+                data-aos-delay="700">
                 <input type="tel" name="tel" class="form-control" placeholder="Phone">
               </div>
-              <div class="col-12 form-group">
+              <div class="col-12 form-group" data-aos="fade-up" data-aos-delay="900">
                 <textarea name="comment" class="form-control contacts-textarea" id="textarea" rows="7"
                   placeholder="Write your message here..."></textarea>
               </div>
-              <div class="btn-group col-12 col-md-6 mx-auto contacts-actions" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-lg btn-outline-primary contacts-actions-btn">Send message</button>
+              <div class="btn-group col-12 col-md-6 mx-auto contacts-actions" role="group" aria-label="Basic example"
+                data-aos="fade-up" data-aos-delay="1100">
+                <button type="submit" class="btn btn-lg btn-outline-primary contacts-actions-btn">Send message</button>
               </div>
             </div>
           </form>
@@ -541,6 +544,51 @@
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="container footer-contact">
+      <div class="row">
+        <div class="col-sm-12 col-xl-5 footer-top">
+          <h3 class="footer-title">ABOUT US</h3>
+          <p class="footer-info">Phasellus accumsan nibh odio, a tincidunt nunc condimentum non. Maecenas fringilla
+            consectetur luctus.
+            Nulla ut iaculis quam, pharetra porta libero. Phasellus et tristique orci, nec malesuada velit. V...</p>
+        </div>
+        <div class="col-xl-2 offset-xl-1 col-md-4 col-sm-6 d-flex flex-column footer-item">
+          <h3 class="footer-list-title footer-title">Contacts</h3>
+          <a href="#" class="footer-list-link">Phone</a>
+          <a href="#" class="footer-list-link">Email</a>
+          <a href="#" class="footer-list-link">Telegramm</a>
+          <a href="#" class="footer-list-link">Viber</a>
+          <a href="#" class="footer-list-link">Facebook</a>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 d-flex flex-column footer-item">
+          <h3 class="footer-list-title footer-title">Categories</h3>
+          <a href="#" class="footer-list-link">Brochure</a>
+          <a href="#" class="footer-list-link">Graphics</a>
+          <a href="#" class="footer-list-link">Logo</a>
+          <a href="#" class="footer-list-link">Visiting card</a>
+          <a href="#" class="footer-list-link">Websites</a>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 d-flex flex-column footer-item">
+          <h3 class="footer-list-title footer-title">Menu</h3>
+          <a href="#" class="footer-list-link">About us</a>
+          <a href="#" class="footer-list-link">Blog</a>
+          <a href="#" class="footer-list-link">Responsive Design</a>
+          <a href="#" class="footer-list-link">Services</a>
+          <a href="#" class="footer-list-link">Team</a>
+          <a href="#" class="footer-list-link">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer-copy">
+      <div class="w-75 mx-auto text-center">
+        <a href="#" class="">© Copyright 2022 Aleksander</a>
+      </div>
+    </div>
+  </footer>
+  <div class="btn-group back-to-top" id="backToTop"><button class="btn btn-dark"><i
+        class="fas fa-arrow-up"></i></button></div>
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
