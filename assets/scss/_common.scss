@@ -7,6 +7,7 @@ html {
 
 body {
   position: relative;
+
   overflow: hidden;
 
   color: $color-gray;
@@ -45,11 +46,12 @@ section {
 
 .back-to-top {
   position: fixed;
-  bottom: 15px;
   right: 15px;
+  bottom: 15px;
 
   .btn {
     display: block;
+
     width: 45px;
     height: 45px;
 
@@ -59,16 +61,19 @@ section {
       opacity: 1;
     }
     &:focus {
-      box-shadow: none;
       border: none;
+      box-shadow: none;
     }
   }
 
   i {
     display: block;
-    font-size: 1rem;
+
     margin-bottom: -2px;
+
     transition: margin-top 0.5s ease-in-out;
+
+    font-size: 1rem;
   }
 
   .btn:hover i {
