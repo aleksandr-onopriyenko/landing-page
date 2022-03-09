@@ -48,18 +48,17 @@ section {
   position: fixed;
   right: 15px;
   bottom: 15px;
+  z-index: 100;
 
   .btn {
     display: block;
 
     width: 45px;
     height: 45px;
+    background-color: $color-dark;
+    opacity: 0.2;
+    border-color: transparent;
 
-    opacity: 0.25;
-
-    &:hover {
-      opacity: 1;
-    }
     &:focus {
       border: none;
       box-shadow: none;
