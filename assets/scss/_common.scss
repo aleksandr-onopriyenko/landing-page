@@ -21,7 +21,7 @@ section {
   width: 100%;
 }
 
-@for $i from 1 through 6 {
+@for $i from 2 through 6 {
   h#{$i} {
     color: $color-dark;
 

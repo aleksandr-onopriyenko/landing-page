@@ -1,25 +1,43 @@
 .slider {
   position: relative;
 
-  &-overlay {
-    position: absolute;
-    z-index: 1;
+  &-item {
+    &:nth-child(1) &__overlay {
+      opacity: 0.69;
+    }
+    &:nth-child(2) &__overlay {
+      opacity: 0.2;
+    }
+    &:nth-child(3) &__overlay {
+      opacity: 0.2;
+    }
 
-    width: 100%;
-    height: 100%;
+    &:nth-child(4) &__overlay {
+      opacity: 0.3;
+      & + img {
+        filter: grayscale(0.5);
+      }
+    }
 
-    background: $color-dark;
+    &__overlay {
+      position: absolute;
+      z-index: 1;
 
-    inset: 0;
-  }
+      width: 100%;
+      height: 100%;
 
-  &-item__title {
-    display: block;
+      background: $color-dark;
+      opacity: 0.5;
 
-    margin-bottom: 4px;
+      inset: 0;
+    }
 
-    font-family: $font-header;
-    color: $color-light;
-    font-size: 1.75rem;
+    &__title {
+      display: block;
+
+      font-family: $font-header;
+      color: $color-light;
+      font-size: 1.75rem;
+    }
   }
 }

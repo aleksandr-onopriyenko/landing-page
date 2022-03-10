@@ -34,31 +34,6 @@
 
     height: 100%;
 
-    &:nth-child(1) {
-      .slider-overlay {
-        opacity: 0.69;
-      }
-    }
-    &:nth-child(2) {
-      .slider-overlay {
-        opacity: 0.2;
-      }
-    }
-    &:nth-child(3) {
-      .slider-overlay {
-        opacity: 0.2;
-      }
-    }
-
-    &:nth-child(4) {
-      .slider-overlay {
-        opacity: 0.3;
-      }
-      img {
-        filter: grayscale(0.5);
-      }
-    }
-
     img {
       width: 100%;
       height: 100%;
